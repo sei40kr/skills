@@ -1,0 +1,13 @@
+{
+  "name": "sei40kr",
+  "owner": {
+    "name": "Seong Yong-ju"
+  },
+  "plugins": [
+    {
+      "name": "sei40kr-skills",
+      "description": "Personal agent skills for writing, git commits, Notion pages, and web projects.",
+      "source": "./"
+    }
+  ]
+}
