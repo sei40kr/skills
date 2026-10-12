@@ -51,6 +51,15 @@ Verify Next.js changes without clobbering a running `next dev` server.
 
 - [agent-browser](#agent-browser) (optional)
 
+### [open-pr](skills/open-pr)
+
+Open a GitHub pull request against the right upstream repository: follow its PR template, run its PR-triggered workflows locally, then open the browser-based creation page with `gh pr create --web`.
+
+**Depends on:**
+
+- `gh` CLI
+- [good-writing](#good-writing)
+
 ### [review](skills/review)
 
 Review a diff, commit, or pull request and fix what the review finds. So far the only rule sends code comments through `writing-code-comments`.
