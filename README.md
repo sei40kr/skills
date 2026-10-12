@@ -43,6 +43,14 @@ Verify Next.js changes without clobbering a running `next dev` server.
 
 - [agent-browser](#agent-browser) (optional)
 
+### [review](skills/review)
+
+Review a diff, commit, or pull request and fix what the review finds. So far the only rule sends code comments through `writing-code-comments`.
+
+**Depends on:**
+
+- [writing-code-comments](#writing-code-comments)
+
 ### [writing-code-comments](skills/writing-code-comments)
 
 Write code comments and docstrings that explain why, not what.
