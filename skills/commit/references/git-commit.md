@@ -4,7 +4,7 @@ Commands for each step of the `commit` skill in a git repository.
 
 ## 1. Survey
 
-`git status`, `git diff`, `git diff --staged`.
+`git status` (never `-uall`; it can exhaust memory on large repositories), `git diff`, `git diff --staged`, and `git log` for the repository's message style.
 
 ## 3. Fold into unpushed commits
 
@@ -18,7 +18,14 @@ Stage with the `git-surgeon` skill. `git add .` / `git add -A` are denied by the
 
 ## 6. Commit
 
-`git commit -m "<message>"`, or the amend variant when folding.
+`git commit -m "<message>"`, or the amend variant when folding. Pass a multi-line message through a heredoc so its formatting survives the shell:
+
+```
+git commit -m "$(cat <<'EOF'
+<message>
+EOF
+)"
+```
 
 A failed pre-commit hook means the commit did not happen. Fix the issue, re-stage, and retry the same command — do not switch to `--amend`, or you will rewrite the previous commit.
 

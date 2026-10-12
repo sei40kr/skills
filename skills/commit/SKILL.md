@@ -38,7 +38,7 @@ Run `jj root`. If it succeeds the repository is managed by jujutsu: use `jj` wit
 
 ## 1. Survey the working tree
 
-Enumerate everything that could land in the commit.
+Enumerate everything that could land in the commit. If nothing would, say so; never create an empty commit.
 
 ## 2. Review before selecting
 
@@ -50,7 +50,7 @@ If the change belongs with a commit that is not pushed yet, fold it into that co
 
 ## 4. Select hunks and verify
 
-Select exactly the hunks that belong to the change; whole-file selection is too coarse when a file mixes related and unrelated hunks. Then compare the diff that will land against the user's intent. If anything unrelated crept in, surface it and confirm before continuing.
+Select exactly the hunks that belong to the change; whole-file selection is too coarse when a file mixes related and unrelated hunks. Leave out files that likely hold secrets (`.env`, credentials, tokens) even when they changed; if the user asks for them by name, warn before continuing. Then compare the diff that will land against the user's intent. If anything unrelated crept in, surface it and confirm before continuing.
 
 ## 5. Write the message
 

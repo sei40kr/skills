@@ -34,7 +34,7 @@ The command depends on what was selected:
 - Whole files: `jj commit -m "<message>" -- <paths>`.
 - Everything in `@`: `jj commit -m "<message>"`.
 
-Always pass `-m`: without it jj opens an editor, which hangs the session. jj signs the commit itself when `signing.behavior` is configured, and `jj-hunk-tool` drives jj underneath, so the sandbox rule applies to all three commands.
+Always pass `-m`: without it jj opens an editor, which hangs the session. For a multi-line message, pass one `-m` per paragraph or a heredoc as with git. jj signs the commit itself when `signing.behavior` is configured, and `jj-hunk-tool` drives jj underneath, so the sandbox rule applies to all three commands.
 
 jj has no commit hooks; `jj fix` stands in for them. After committing, run `jj fix -s @-` and confirm it reports no errors. It rewrites commits, so it runs outside the sandbox too. If it fails, fix the cause, fold the fix into `@-`, and run it again.
 
