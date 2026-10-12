@@ -22,22 +22,26 @@ Keep unrelated changes out of the commit, and make sure it is signed.
 
 `git status`, `git diff`, `git diff --staged` — enumerate everything that could land in the commit.
 
+## 2. Review before staging
+
+Run the `review` skill unless the change already went through it this session. Its fixes belong in this commit, so they have to land before staging.
+
 ## Fold into unpushed commits
 
 If the change belongs with a commit that is not pushed yet (`git log @{upstream}..`), amend or squash it in with the `git-surgeon` skill instead of stacking a new commit on top — and revisit that commit's message, since the fold may change what it does.
 
-## 2. Stage hunks and verify
+## 3. Stage hunks and verify
 
 Stage with the `git-surgeon` skill. `git add .` / `git add -A` are denied by the harness, and plain `git add <file>` is too coarse when a file mixes related and unrelated hunks. Re-run `git diff --staged` and compare against the user's intent; if anything unrelated crept in, surface it and confirm before continuing.
 
-## 3. Write the message
+## 4. Write the message
 
 Use the `good-writing` skill. Describe the staged diff, not the request. The reader has no access to the conversation — drop task framing and context that lives only in the prompt.
 
-## 4. Commit outside the sandbox
+## 5. Commit outside the sandbox
 
 Run `git commit` with `dangerouslyDisableSandbox: true`. Signing needs gpg-agent, which the sandbox blocks — inside it the commit fails or silently lands unsigned.
 
-## 5. Confirm
+## 6. Confirm
 
 `git status`, to verify the commit landed and the tree is in the expected state.

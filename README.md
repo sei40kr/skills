@@ -20,6 +20,7 @@ Stage hunks selectively, verify the staged diff, and create a signed commit outs
 
 - [git-surgeon](#git-surgeon)
 - [good-writing](#good-writing)
+- [review](#review)
 
 ### [good-writing](skills/good-writing)
 
