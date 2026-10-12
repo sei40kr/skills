@@ -38,6 +38,8 @@ Stage with the `git-surgeon` skill. `git add .` / `git add -A` are denied by the
 
 Use the `good-writing` skill. Describe the staged diff, not the request. The reader has no access to the conversation — drop task framing and context that lives only in the prompt.
 
+Follow the repository's own convention when it has one — check CONTRIBUTING, a commitlint config, and the style of recent `git log` entries. When the repository specifies none, write an Angular conventional commit as described in [references/angular-conventional-commits.md](references/angular-conventional-commits.md).
+
 ## 5. Commit outside the sandbox
 
 Run `git commit` with `dangerouslyDisableSandbox: true`. Signing needs gpg-agent, which the sandbox blocks — inside it the commit fails or silently lands unsigned.
