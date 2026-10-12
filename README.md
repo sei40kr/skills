@@ -12,13 +12,14 @@ Create a Notion page in your private space by default, then review it as a first
 
 - Notion MCP server
 
-### [git-commit](skills/git-commit)
+### [commit](skills/commit)
 
-Stage hunks selectively, verify the staged diff, and create a signed commit outside the sandbox.
+Select hunks, verify the diff that will land, and create a signed commit outside the sandbox — with jj in a jujutsu repository, git otherwise.
 
 **Depends on:**
 
-- [git-surgeon](#git-surgeon)
+- [git-surgeon](#git-surgeon) (git repositories only)
+- [jj-surgeon](#jj-surgeon) (jj repositories only)
 - [good-writing](#good-writing)
 - [review](#review)
 
@@ -73,6 +74,10 @@ Install these alongside the skills that need them. A skill whose dependency is m
 ### git-surgeon
 
 Non-interactive, hunk-level git staging. Provides both the `git-surgeon` CLI and its skill. See [raine/git-surgeon](https://github.com/raine/git-surgeon).
+
+### jj-surgeon
+
+Non-interactive, hunk-level jujutsu operations. Provides both the `jj-hunk-tool` CLI and the `jj-surgeon` skill. See [mvzink/jj-hunk-tool](https://github.com/mvzink/jj-hunk-tool).
 
 ### agent-browser
 
