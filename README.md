@@ -30,6 +30,12 @@ Write concise, precise prose: docs, PR descriptions, commit messages, blog posts
 
 - [yomiyasu](#yomiyasu) (optional)
 
+### [grilling](skills/grilling)
+
+Interview you about a plan, decision, or idea in rounds, one frontier of questions at a time. In Claude Code the questions arrive as its prompt UI. Adapted from [mattpocock/skills](https://github.com/mattpocock/skills)' `grilling`.
+
+**Depends on:** none
+
 ### [initializing-web-project](skills/initializing-web-project)
 
 Scaffold a web project on a Nix devshell with Bun, TypeScript, and Biome, plus optional libraries.
