@@ -59,6 +59,14 @@ Review a diff, commit, or pull request and fix what the review finds. So far the
 
 - [writing-code-comments](#writing-code-comments)
 
+### [write-like-me](skills/write-like-me)
+
+Write Japanese in your own voice: comments and messages to others, issue and PR bodies, and memos.
+
+**Depends on:**
+
+- [good-writing](#good-writing)
+
 ### [writing-code-comments](skills/writing-code-comments)
 
 Write code comments and docstrings that explain why, not what.
