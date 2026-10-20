@@ -17,7 +17,7 @@ The split is by whether the text addresses someone, not by who ends up reading i
 The text is Japanese with Latin tokens embedded as ordinary words — so they are conjugated and particled directly, with no spacing and no translation: 「renameして」「nullableなら」「CIで確認」「7件」. Spacing is reserved for typographic objects, not word boundaries: a space before an opening paren and around inline code spans.
 
 - Punctuation: 「、」「。」 for Japanese; half-width `?` `!` `:` `( )`. A sentence that ends on a Latin token may close with `.` instead of 「。」.
-- Technical vocabulary stays in lowercase English (rename, mapping, fallback, nullable, cache, retry, timeout, fail-soft). English engineering slang and acronyms likewise stay as-is — LGTM, IMO, FWIW, YAGNI, AFAIK, nit, WIP — and sentence-initial ones take a comma: 「IMO, 〜」.
+- Technical vocabulary stays in lowercase English (rename, mapping, fallback, nullable, cache, retry, timeout, fail-soft) — nouns as well as verbs: 「cacheが切れる」, not 「キャッシュが切れる」. English engineering slang and acronyms likewise stay as-is — LGTM, IMO, FWIW, YAGNI, AFAIK, nit, WIP — and sentence-initial ones take a comma: 「IMO, 〜」.
 - `→` / `->` expresses renames, mappings and cause→effect inline: 「`foo` → `bar` にrename」「cacheが切れる → 再取得」.
 - Lines starting with `→` carry a thought forward one step per line. Two uses:
   - Reasoning: each line is deduced from the one above, with no new facts, ending in the conclusion.
