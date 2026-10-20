@@ -10,6 +10,7 @@ allowed-tools:
   - Bash(jj commit:*)
   - Bash(jj squash:*)
   - Bash(jj describe:*)
+  - Bash(jj fix:*)
   - Bash(jj undo:*)
   - Bash(jj-hunk-tool hunks:*)
   - Bash(jj-hunk-tool patch:*)

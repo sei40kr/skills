@@ -36,7 +36,9 @@ The command depends on what was selected:
 
 Always pass `-m`: without it jj opens an editor, which hangs the session. jj signs the commit itself when `signing.behavior` is configured, and `jj-hunk-tool` drives jj underneath, so the sandbox rule applies to all three commands.
 
-jj has no commit hooks, so there is no failed-hook case to recover from. If something unrelated landed anyway, `jj undo` reverts the commit so the selection can be redone.
+jj has no commit hooks; `jj fix` stands in for them. After committing, run `jj fix -s @-` and confirm it reports no errors. It rewrites commits, so it runs outside the sandbox too. If it fails, fix the cause, fold the fix into `@-`, and run it again.
+
+If something unrelated landed anyway, `jj undo` reverts the commit so the selection can be redone.
 
 ## 7. Confirm
 
