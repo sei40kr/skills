@@ -8,6 +8,7 @@ description: Write concise, precise prose. Use when authoring or revising text a
 - **Don't let the request shape the text.** You will default to echoing the prompt and answering it. The reader never saw the prompt — write for someone meeting the subject cold.
 - **Lead with the conclusion.** Readers stop early. Put the answer first, the support after.
 - **Use the right term, and the same one throughout.** Work out the concept, then look up what the codebase or the field already calls it — its ubiquitous language. The request may name it loosely, and alternating between synonyms reads as two different things.
+- **Put a term's explanation before its first use.** If a term gets explained, a reader who meets it earlier reads on confused until the explanation arrives.
 - **Don't invent your own translation.** When the source and the output are in different languages, terms and proper nouns usually have an established form — look it up rather than rendering it yourself.
 - **Shorter wins at equal information.** Cut filler, hedging, and restatement. Never pad to look thorough.
 
