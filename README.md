@@ -59,7 +59,7 @@ Review a diff, commit, or pull request and fix what the review finds. So far the
 
 - [writing-code-comments](#writing-code-comments)
 
-### [write-like-me](skills/write-like-me)
+### [write-like-yongju](skills/write-like-yongju)
 
 Write Japanese in your own voice: comments and messages to others, issue and PR bodies, and memos.
 

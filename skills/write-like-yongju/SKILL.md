@@ -1,5 +1,5 @@
 ---
-name: write-like-me
+name: write-like-yongju
 description: Write Japanese text addressed to other people in the user's own voice — GitHub issue and PR bodies, review and issue comments, discussions, Slack messages, memos to self. Use whenever writing or rewriting Japanese conversation or documents the user will send or post as themselves, or when asked to write 私っぽく / 自分の口調で.
 ---
 
