@@ -36,7 +36,7 @@ Keep unrelated changes out of the commit, and make sure it is signed.
 
 `jj root` output, captured when this skill loaded: !`jj root 2>/dev/null || echo "not a jj repository"`
 
-Decide from this output alone, not from the presence of `.git`. If it prints a path the repository is managed by jujutsu: use `jj` with the `jj-surgeon` skill and follow [references/jj-commit.md](references/jj-commit.md). Otherwise use `git` with the `git-surgeon` skill and follow [references/git-commit.md](references/git-commit.md). The rules below are the same for both; the reference docs map each step to that tool's commands. In a colocated repository (`.jj` next to `.git`) still use `jj` — writing through `git` leaves jj to reconcile afterwards.
+Decide from this output alone, not from the presence of `.git`. If it prints a path the repository is managed by jujutsu: use `jj` with the `jj-surgeon` skill and follow [references/jj-commit.md](references/jj-commit.md). Otherwise use `git` and `git-surgeon` and follow [references/git-commit.md](references/git-commit.md). The rules below are the same for both; the reference docs map each step to that tool's commands. In a colocated repository (`.jj` next to `.git`) still use `jj` — writing through `git` leaves jj to reconcile afterwards.
 
 ## 1. Survey the working tree
 
