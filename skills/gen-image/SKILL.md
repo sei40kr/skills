@@ -10,12 +10,12 @@ Generate a draft on the subscription, have the user review it, and spend money o
 ## 1. Generate the draft with the subscription
 
 ```sh
-scripts/codex.sh <out.png> "<prompt>"
+scripts/codex.sh <out.png> "<prompt>" [reference.png...]
 ```
 
 It runs `codex exec` with Codex's built-in `image_gen` tool, which uses the user's ChatGPT Plus or Pro plan, and copies the result to `<out.png>`. If the Bash sandbox blocks Codex, rerun with the sandbox disabled.
 
-Codex sees nothing but the prompt, so put everything the image needs into it. Look at the result. If it misses the request, revise the prompt and generate again before showing it to the user.
+Whenever you can prepare reference images for the result, pass them after the prompt; Codex attaches them to the prompt, and the prompt should say what to take from each. Codex sees nothing else, so put everything the image needs into the prompt and references. Look at the result. If it misses the request, revise the prompt and generate again before showing it to the user.
 
 ## 2. Have the user review the draft
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Usage: codex.sh <out-file> <prompt>
+# Usage: codex.sh <out-file> <prompt> [reference-image...]
 #
 # Generates an image with Codex's built-in image_gen tool under the user's
 # ChatGPT subscription and copies it to <out-file>. Exits 1 when Codex saved
@@ -8,6 +8,13 @@ set -euo pipefail
 
 out=$1
 prompt=$2
+shift 2
+refs=()
+for ref in "$@"; do
+  [ -f "$ref" ] || { echo "Reference image not found: $ref" >&2; exit 1; }
+  # Absolute, because Codex runs in its own workdir below.
+  refs+=("--image=$(realpath "$ref")")
+done
 images=${CODEX_HOME:-$HOME/.codex}/generated_images
 
 if ! command -v codex >/dev/null; then
@@ -24,7 +31,7 @@ trap 'rm -rf "$workdir"' EXIT
 events=$workdir/events.jsonl
 
 # Codex writes the image under $CODEX_HOME itself, so its own sandbox can stay read-only.
-if ! codex exec --json --skip-git-repo-check -C "$workdir" --sandbox read-only \
+if ! codex exec --json --skip-git-repo-check -C "$workdir" --sandbox read-only ${refs[@]+"${refs[@]}"} -- \
   "Generate one image with the image_gen tool from this prompt, and do nothing else: $prompt" >"$events"; then
   cat "$events" >&2
   exit 1
