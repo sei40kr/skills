@@ -19,11 +19,9 @@ Whenever you can prepare reference images for the result, pass them after the pr
 
 ## 2. Have the user review the draft
 
-Ask the questions in this step with `AskUserQuestion` when it's available.
+Open the draft with `open` (macOS) or `xdg-open` (Linux) so the user can see it.
 
-Ask whether to open a preview of the draft, with the options Open and Skip. On Open, run `open` (macOS) or `xdg-open` (Linux) on it.
-
-Decide whether the draft needs upscaling by comparing its resolution, which `file <draft.png>` prints, with the resolution the task needs. Then ask:
+Decide whether the draft needs upscaling by comparing its resolution, which `file <draft.png>` prints, with the resolution the task needs. Then ask, with `AskUserQuestion` when it's available:
 
 - If the draft is enough, offer Accept and Regenerate.
 - If it needs upscaling, offer Upscale, stating the size, quality, and model you'd use, and Use the draft as is. Choosing Upscale is the user's approval to spend money; never upscale without it.
