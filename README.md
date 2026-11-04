@@ -23,6 +23,16 @@ Select hunks, verify the diff that will land, and create a signed commit outside
 - [good-writing](#good-writing)
 - [review](#review)
 
+### [gen-image](skills/gen-image)
+
+Generate a draft image with Codex under your ChatGPT plan and ask you to review it. If you approve, re-render it at higher resolution through the pay-as-you-go OpenAI image API.
+
+**Depends on:**
+
+- [Codex CLI](#codex-cli), logged in with a ChatGPT Plus or Pro plan
+- `jq`
+- `OPENAI_API_KEY` for upscaling (optional)
+
 ### [good-writing](skills/good-writing)
 
 Write concise, precise prose: docs, PR descriptions, commit messages, blog posts.
@@ -87,6 +97,10 @@ Write code comments and docstrings that explain why, not what.
 ## External dependencies
 
 Install these alongside the skills that need them. A skill whose dependency is missing will still load, but the steps that call the dependency won't work.
+
+### Codex CLI
+
+OpenAI's coding agent CLI. `gen-image` uses its built-in image generation, which needs a ChatGPT login rather than an API key. See [openai/codex](https://github.com/openai/codex).
 
 ### git-surgeon
 
