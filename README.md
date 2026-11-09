@@ -57,10 +57,6 @@ Scaffold a web project on a Nix devshell with Bun, TypeScript, and Biome, plus o
 
 Verify Next.js changes without clobbering a running `next dev` server.
 
-**Depends on:**
-
-- [agent-browser](#agent-browser) (optional)
-
 ### [open-pr](skills/open-pr)
 
 Open a GitHub pull request against the right upstream repository: follow its PR template, run its PR-triggered workflows locally, then open the browser-based creation page with `gh pr create --web`.
@@ -109,10 +105,6 @@ Non-interactive, hunk-level git staging. Provides both the `git-surgeon` CLI and
 ### jj-surgeon
 
 Non-interactive, hunk-level jujutsu operations. Provides both the `jj-hunk-tool` CLI and the `jj-surgeon` skill. See [mvzink/jj-hunk-tool](https://github.com/mvzink/jj-hunk-tool).
-
-### agent-browser
-
-Browser automation CLI for agents. Provides both the `agent-browser` CLI and its skill. See [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser).
 
 ### yomiyasu
 
