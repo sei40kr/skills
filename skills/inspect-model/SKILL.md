@@ -1,5 +1,5 @@
 ---
-name: inspect-constraints
+name: inspect-model
 description: Inspect a model for the constraints on each field: derived fields, nullability and when it holds, and value constraints including code values. Use when asked what values a model's fields accept.
 arguments: [model]
 argument-hint: "[model]"
