@@ -1,6 +1,6 @@
 ---
 name: inspect-constraints
-description: Inspect a model for the constraints on each field: nullability and when it holds, and value constraints including code values. Use when asked what values a model's fields accept.
+description: Inspect a model for the constraints on each field: derived fields, nullability and when it holds, and value constraints including code values. Use when asked what values a model's fields accept.
 arguments: [model]
 argument-hint: "[model]"
 ---
@@ -8,7 +8,26 @@ argument-hint: "[model]"
 - Input: the target model `$model`. If it is empty, ask the user. Find the location of its source code in the project's CLAUDE.md or docs, or ask the user. Treat the source code as read-only, and trust it over design docs
 - Output: findings in the conversation, each with its source `path:line`, plus carry-over items for whatever the code does not settle
 
-# 1. Find which fields can be null
+# 1. Find derived fields
+
+A derived field holds a value that other fields determine. Examples:
+
+- an aggregate over a collection
+- a calculation or concatenation over other fields
+- a value computed from a field and the current date
+- a flag that only says whether another field is set
+- a display label built from another field
+
+For each field:
+
+1. Hypothesize the formula from the field's meaning: its name, screen labels, and business context
+2. Verify on every path that sets the field that it is computed by that formula and recomputed whenever a source changes. Look for a counterexample path as hard as for a confirming one
+3. Record the formula, its locations, and a verdict:
+   - **Derived**: every path computes it from the sources. Skip it in the later steps; its constraints follow from the sources
+   - **Snapshot**: the value must not follow its sources once written, such as a value copied from a master or fixed at a past point in time. Check whether the sources can change after the value is written
+   - **Inconsistent**: some path computes it differently or forgets to recompute it. It is a carry-over item
+
+# 2. Find which fields can be null
 
 Decide each field's nullability from evidence. Record each piece with its location and certainty. A path is a place that sets the field; other paths may always exist.
 
@@ -61,7 +80,7 @@ Work hypothesis-first:
    - **Refuted**: a path violates it. Cite the counterexample
    - **Undetermined**: the code neither confirms nor refutes it, including when the value comes from code or data you cannot read, or the paths are too dynamic to follow. Do not decide it yourself; it is a carry-over item
 
-# 2. Collect value constraints
+# 3. Collect value constraints
 
 For every input and every value that crosses a boundary, record:
 

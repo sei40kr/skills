@@ -55,7 +55,7 @@ Scaffold a web project on a Nix devshell with Bun, TypeScript, and Biome, plus o
 
 ### [inspect-constraints](skills/inspect-constraints)
 
-Inspect an existing model for the constraints on each field: nullability and when it holds (co-occurrence, mutual exclusion), empty strings, and value constraints, including where code values are defined and rules across fields.
+Inspect an existing model for the constraints on each field: derived fields, nullability and when it holds (co-occurrence, mutual exclusion), empty strings, and value constraints, including where code values are defined and rules across fields.
 
 **Depends on:** none
 
