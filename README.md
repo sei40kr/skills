@@ -53,6 +53,12 @@ Scaffold a web project on a Nix devshell with Bun, TypeScript, and Biome, plus o
 
 **Depends on:** none
 
+### [naming-convention](skills/naming-convention)
+
+Name a model's types, fields, and methods, fix bad names, new or existing (romanized Japanese, typos, abbreviations, Japanese-made English, Flag / Code / Label suffixes), and keep one ubiquitous language.
+
+**Depends on:** none
+
 ### [next-dev](skills/next-dev)
 
 Verify Next.js changes without clobbering a running `next dev` server.
