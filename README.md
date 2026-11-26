@@ -86,6 +86,14 @@ Review a diff, commit, or pull request and fix what the review finds. So far the
 
 - [writing-code-comments](#writing-code-comments)
 
+### [type-driven-design](skills/type-driven-design)
+
+Design types so illegal states are unrepresentable: value types and when to group fields into them, sum types, exhaustive matching, and nullability.
+
+**Depends on:**
+
+- [naming-convention](#naming-convention)
+
 ### [write-like-yongju](skills/write-like-yongju)
 
 Write Japanese in your own voice: comments and messages to others, issue and PR bodies, and memos.

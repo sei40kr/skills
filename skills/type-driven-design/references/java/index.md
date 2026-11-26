@@ -1,0 +1,24 @@
+Each example is one Java file. They target Java 21 with JSpecify's `@Nullable` and model one online shop. Only `Customer.java` shows `Objects.requireNonNull` in the compact constructor; the others omit it to stay short.
+
+- Derived fields
+  - Derived: [Price.java](Price.java)
+  - Snapshot: [OrderLine.java](OrderLine.java)
+- Nullability
+  - Nullable: [Customer.java](Customer.java)
+  - Conditions for null and non-null
+    - Co-occurrence between fields: [GeoPoint.java](GeoPoint.java)
+    - Co-occurrence with a discriminator value: [Shipment.java](Shipment.java)
+    - Mutual exclusion
+      - [PaymentMethod.java](PaymentMethod.java)
+      - [ContactPoints.java](ContactPoints.java)
+- Value constraints
+  - Strings
+    - [PostalCode.java](PostalCode.java)
+    - [PhoneNumber.java](PhoneNumber.java)
+  - Lists: [OrderLines.java](OrderLines.java)
+  - Numbers and dates: [DiscountRate.java](DiscountRate.java)
+  - The same constraints in several fields: [Order.java](Order.java)
+  - Enumerations
+    - Fixed: [TaxDisplay.java](TaxDisplay.java)
+    - Data-driven: [Category.java](Category.java)
+  - Rules across fields: [CouponPeriod.java](CouponPeriod.java)
