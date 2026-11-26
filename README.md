@@ -53,6 +53,12 @@ Scaffold a web project on a Nix devshell with Bun, TypeScript, and Biome, plus o
 
 **Depends on:** none
 
+### [inspect-constraints](skills/inspect-constraints)
+
+Inspect an existing model for the constraints on each field: nullability and when it holds (co-occurrence, mutual exclusion), empty strings, and value constraints, including where code values are defined and rules across fields.
+
+**Depends on:** none
+
 ### [naming-convention](skills/naming-convention)
 
 Name a model's types, fields, and methods, fix bad names, new or existing (romanized Japanese, typos, abbreviations, Japanese-made English, Flag / Code / Label suffixes), and keep one ubiquitous language.
